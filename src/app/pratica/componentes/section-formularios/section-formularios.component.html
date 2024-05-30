@@ -1,0 +1,41 @@
+<app-contain>
+
+ <section class="cabecalho-link">
+  <div>
+    <button>
+      <img class="seta" src="assets/img/arrow-left.png" alt="">
+      <a routerLink="/listar-cliente">Voltar</a>
+    </button>
+  </div>
+  <h4>Formulário Reativos.</h4>
+
+ </section>
+
+  <section class="formularios">
+    <form [formGroup]="clienteForm" (ngSubmit)="salvarCliente()">
+      <label>Nome</label>
+      <input type="text" formControlName="nome">
+      <div class="mensagem-erro" *ngIf="clienteForm.get('nome')?.errors &&  clienteForm.get('nome')?.touched" >
+        Campo obrigatório*
+      </div>
+      <label>Telefone</label>
+      <input type="text" formControlName="telefone">
+      <label>E-mail</label>
+      <input type="email" formControlName="email">
+      <div class="mensagem-erro" *ngIf="clienteForm.get('email')?.errors && clienteForm.get('email')?.touched">
+        formato do email errado*
+      </div>
+      <label for="redes">Observações</label>
+      <textarea
+      type="text"
+      id="observacoes"
+      placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
+      formControlName="observacoes" name="observacoes"
+    ></textarea>
+      <section class="botoes">
+        <button class=" botao-cancelar btn btn-secondary " (click)="cancelar()" type="button" >Cancelar</button>
+        <button class="botao-salvar btn btn-primary"  type="submit" [disabled]="clienteForm.invalid">Salvar</button>
+      </section>
+    </form>
+  </section>
+</app-contain>

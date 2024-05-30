@@ -1,0 +1,39 @@
+{
+  "cliente": [
+    {
+      "id": 1,
+      "nome": "Paulo Samuel",
+      "email": "paulo@mailinator.com",
+      "telefone": "94567876",
+      "observacoes": "Testando o site"
+    },
+    {
+      "nome": "Kim Paiva Domingos ",
+      "telefone": "924605050",
+      "email": "kim@mailinator.com",
+      "observacoes": "Eu sou o Kim e estou gostando de usar o vosso site",
+      "id": 2
+    },
+    {
+      "nome": "Paula Fernandes",
+      "telefone": "945606860",
+      "email": "paula@mailitor.com",
+      "observacoes": "Site legal gostei muito de conhecer",
+      "id": 3
+    },
+    {
+      "nome": "Carlas Vandune",
+      "telefone": "956707070",
+      "email": "carlas@mailintor.com",
+      "observacoes": "Eu sou a Carla e gostaria se saber mais coisas sobre o vosso site",
+      "id": 4
+    },
+    {
+      "nome": "Telma Pedro Paxi",
+      "telefone": "945606060",
+      "email": "tema@mailintor.com",
+      "observacoes": "Fazendo testes",
+      "id": 5
+    }
+  ]
+}

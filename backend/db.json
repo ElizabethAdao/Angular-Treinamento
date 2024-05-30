@@ -1,0 +1,76 @@
+{
+  "contatos": [
+    {
+      "nome": "Maria",
+      "telefone": "99 99999999",
+      "email": "maria@email.com",
+      "aniversario": "1995-06-01",
+      "redes": "",
+      "observacoes": "",
+      "id": 1
+    },
+    {
+      "nome": "João",
+      "telefone": "88 88888888",
+      "email": "joao@email.com",
+      "aniversario": "1990-01-06",
+      "redes": "",
+      "observacoes": "",
+      "id": 2
+    },
+    {
+      "nome": "Capitao",
+      "telefone": "94567322",
+      "email": "capaitao@gmail.com",
+      "aniversario": "2024-05-27",
+      "redes": "http://localhost:4200/formulario",
+      "observacoes": "Testando a aplicação",
+      "id": 3
+    },
+    {
+      "nome": "Gloria Almeiada",
+      "telefone": "943505050",
+      "email": "gloria@mailinator.com",
+      "aniversario": "2024-05-29",
+      "redes": "minfin.gov.ao/ComprasPublicas/#!/backoffice/fornecedor/cadastramento",
+      "observacoes": "",
+      "id": 4
+    },
+    {
+      "nome": "José Carlos",
+      "telefone": "924605050",
+      "email": "jose@mailinator.com",
+      "aniversario": "2024-05-31",
+      "redes": "ww.teste@mailintor.co",
+      "observacoes": "Gostei muito da forma é apresentado as informações na lista de contactos",
+      "id": 5
+    },
+    {
+      "nome": "Carla Prata ",
+      "telefone": "945 230 256",
+      "email": "carla@mailintor.com",
+      "aniversario": "2024-06-02",
+      "redes": "http://localhost:4200/formulario",
+      "observacoes": "",
+      "id": 6
+    },
+    {
+      "nome": "Josemar Mulengo",
+      "telefone": "945 787 823",
+      "email": "josemar@mailintor.com",
+      "aniversario": "2024-06-09",
+      "redes": "https://www.youtube.com/watch?v=sxpWh7x7uoQ&list=PLn64dwBe2-T2biPCruXOo8c3i3mSQHKtm",
+      "observacoes": "Certifique-se de que o seu componente possui as propriedades e métodos necessários para suportar o template acima.",
+      "id": 7
+    },
+    {
+      "nome": "Ana Pedro Adão",
+      "telefone": "967 390 345",
+      "email": "ana@mailintor.com",
+      "aniversario": "2024-06-03",
+      "redes": "",
+      "observacoes": "Certifique-se de que o seu componente possui as propriedades e métodos necessários para suportar o template acima.",
+      "id": 8
+    }
+  ]
+}
