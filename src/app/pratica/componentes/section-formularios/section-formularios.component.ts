@@ -23,7 +23,12 @@ export class SectionFormulariosComponent implements OnInit {
       nome : ['', Validators.required],
       telefone : ['',Validators.required],
       email: ['',[Validators.required, Validators.email]],
-      observacoes : ['']
+      observacoes : [''],
+      enderecos: this.fb.group({
+        rua : [''],
+        cidade : [''],
+        travesa : ['']
+      })
     })
     /*this.clienteForm = new FormGroup({
       nome : new FormControl(''),

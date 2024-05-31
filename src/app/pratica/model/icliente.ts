@@ -4,6 +4,13 @@ export interface ICliente {
     nome: string,
     telefone: string,
     email: string,
-    observacoes :  string
+    observacoes :  string,
+    enderecos: [
+        {
+            rua: string,
+            cidade: string,
+            travessa: string
+        }
+    ]
 }
 

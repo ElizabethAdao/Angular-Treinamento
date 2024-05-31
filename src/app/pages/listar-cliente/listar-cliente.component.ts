@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Icontactos } from 'src/app/interface/icontactos';
 import { ContactosService } from 'src/app/services/contactos.service';
 import { FormsModule } from '@angular/forms';
+declare var $: any;
 
 @Component({
   selector: 'app-listar-cliente',

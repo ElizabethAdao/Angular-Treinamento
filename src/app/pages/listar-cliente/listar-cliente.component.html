@@ -12,7 +12,7 @@
       <img src="assets/img/plus.png" alt="">
       <span>Adicionar contato</span>
     </button>
-    <a class="btn btn-warning" routerLink="/section-forms"> Praticar</a>
+    <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Praticar</a>
   </section>
   <ng-container *ngFor="let letra of alfabeto; ">
     <app-separador>
@@ -22,4 +22,24 @@
       <app-section-contacto [nome]="contato.nome" [telefone]="contato.telefone"></app-section-contacto>
     </ng-container>
   </ng-container>
+    <!--Modal e formularios-->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Formulários no Angular</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <section>
+
+        </section>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 </app-contain>

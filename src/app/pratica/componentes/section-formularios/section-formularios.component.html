@@ -32,6 +32,17 @@
       placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
       formControlName="observacoes" name="observacoes"
     ></textarea>
+      <section  formArrayName="enderecos">
+        <h4>Endereços</h4>
+        <div class="enderecos">
+          <label for="">Número da Rua</label>
+          <input type="text" formControlName="rua">
+          <label for="">Cidade</label>
+          <input type="text" formControlName="cidade">
+          <label for="">Travessa</label>
+          <input type="text" formControlName="travesa">
+        </div>
+      </section>
       <section class="botoes">
         <button class=" botao-cancelar btn btn-secondary " (click)="cancelar()" type="button" >Cancelar</button>
         <button class="botao-salvar btn btn-primary"  type="submit" [disabled]="clienteForm.invalid">Salvar</button>
