@@ -8,6 +8,7 @@ import { Component, Input, OnInit } from '@angular/core';
 export class SectionContactoComponent implements OnInit {
   @Input() nome: string = '';
   @Input() telefone: string = '';
+  @Input() id?: number ;
   constructor() { }
 
   ngOnInit(): void {

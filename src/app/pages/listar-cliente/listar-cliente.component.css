@@ -41,3 +41,11 @@ input {
   height: 20px;
   padding-right: 8px;
 }
+.cards{
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.cards button{
+  padding: 15px;
+}

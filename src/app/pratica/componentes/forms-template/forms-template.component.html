@@ -1,0 +1,49 @@
+<app-contain>
+
+  <section class="cabecalho-link">
+   <div>
+     <button>
+       <img class="seta" src="assets/img/arrow-left.png" alt="">
+       <a routerLink="/listar-cliente">Voltar</a>
+     </button>
+   </div>
+   <h4>Template Drive Forms</h4>
+
+  </section>
+
+   <section class="formularios">
+     <form>
+       <label>Nome</label>
+       <input type="text" name="nomeCliente" [(ngModel)]="cliente.nomeCliente">
+
+       <label>Telefone</label>
+       <input type="text" name="telefone" [(ngModel)]="cliente.telefone" >
+       <label>E-mail</label>
+       <input type="email" [(ngModel)]="cliente.email" name="email">
+       <label for="redes">Observações</label>
+       <textarea
+       type="text"
+       id="observacoes"
+       placeholder="Coloque observações nesse espaço.  Exemplo: “Instrutora da academia “Nova Imagem”, amiga da Júlia”."
+       name="observacoes" [(ngModel)]="cliente.observacoes"
+     ></textarea>
+       <section>
+         <h4>Endereços</h4>
+         <div class="enderecos" *ngFor="let endereco of cliente.enderecos; let i = index">
+          <section>
+            <label for="">Número da Rua</label>
+            <input type="text" id="rua{{i}}" name="rua{{i}}" [(ngModel)]="endereco.rua" required>
+            <label for="">Cidade</label>
+            <input type="text" name="cidade{{i}}" [(ngModel)]="endereco.cidade">
+            <label for="">Travessa</label>
+            <input type="text" name="travesa{{i}}" [(ngModel)]="endereco.travessa">
+          </section>
+         </div>
+       </section>
+       <section class="botoes">
+         <button class=" botao-cancelar btn btn-secondary"  type="button" >Cancelar</button>
+         <button class="botao-salvar btn btn-primary"  type="submit">Salvar</button>
+       </section>
+     </form>
+   </section>
+ </app-contain>

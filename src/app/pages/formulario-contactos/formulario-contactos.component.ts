@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { FormGroup, FormControl, Validators,FormBuilder } from '@angular/forms';
 import { ContactosService } from 'src/app/services/contactos.service';
+import Swal from 'sweetalert2';
 
 
 @Component({
@@ -35,6 +36,11 @@ export class FormularioContactosComponent implements OnInit {
     this.contacto.salvarContactos(novoContacto).subscribe(() =>{
       console.log('inserido com sucesso')
       this.cancelar();
+      Swal.fire({
+        title: "Adicionado com sucesso",
+        text: "",
+        icon: "success"
+      });
        this.router.navigateByUrl('/listar-cliente')
     })
   }

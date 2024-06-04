@@ -21,6 +21,7 @@ import { SectionSeparadorContactoComponent } from './pratica/paginas/section-sep
 import { SectionSeparadorContainerComponent } from './pratica/paginas/section-separador-container/section-separador-container.component';
 import { SectionFormulariosComponent } from './pratica/componentes/section-formularios/section-formularios.component';
 import { SectionLsClientesComponent } from './pratica/componentes/section-ls-clientes/section-ls-clientes.component';
+import { FormsTemplateComponent } from './pratica/componentes/forms-template/forms-template.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,9 @@ import { SectionLsClientesComponent } from './pratica/componentes/section-ls-cli
     SectionSeparadorContactoComponent,
     SectionSeparadorContainerComponent,
     SectionFormulariosComponent,
-    SectionLsClientesComponent
+    SectionLsClientesComponent,
+    FormsTemplateComponent,
+
   ],
   imports: [
 

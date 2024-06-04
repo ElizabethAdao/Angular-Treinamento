@@ -4,6 +4,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { FormularioContactosComponent } from './pages/formulario-contactos/formulario-contactos.component';
 import { ListarClienteComponent } from './pages/listar-cliente/listar-cliente.component';
 import { SectionFormulariosComponent } from './pratica/componentes/section-formularios/section-formularios.component';
+import { FormsTemplateComponent } from './pratica/componentes/forms-template/forms-template.component';
+import { PerfilContatosComponent } from './pages/perfil-contatos/perfil-contatos.component';
 
 
 const routes: Routes = [
@@ -19,6 +21,12 @@ const routes: Routes = [
    },
   {
     path : 'section-forms', component : SectionFormulariosComponent
+  },
+  {
+    path: 'forms-template' , component: FormsTemplateComponent
+  },
+  {
+    path : 'perfil-contato/:id', component: PerfilContatosComponent
   }
 ];
 

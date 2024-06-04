@@ -19,15 +19,6 @@
       "id": 2
     },
     {
-      "nome": "Capitao",
-      "telefone": "94567322",
-      "email": "capaitao@gmail.com",
-      "aniversario": "2024-05-27",
-      "redes": "http://localhost:4200/formulario",
-      "observacoes": "Testando a aplicação",
-      "id": 3
-    },
-    {
       "nome": "Gloria Almeiada",
       "telefone": "943505050",
       "email": "gloria@mailinator.com",
@@ -46,31 +37,40 @@
       "id": 5
     },
     {
-      "nome": "Carla Prata ",
-      "telefone": "945 230 256",
-      "email": "carla@mailintor.com",
-      "aniversario": "2024-06-02",
-      "redes": "http://localhost:4200/formulario",
+      "nome": "Filomena Baptista",
+      "telefone": "919343537",
+      "email": "filomena@mailintor.com",
+      "aniversario": "2024-06-06",
+      "redes": "https://www.aliexpress.com/",
       "observacoes": "",
-      "id": 6
+      "id": 9
     },
     {
-      "nome": "Josemar Mulengo",
-      "telefone": "945 787 823",
-      "email": "josemar@mailintor.com",
-      "aniversario": "2024-06-09",
-      "redes": "https://www.youtube.com/watch?v=sxpWh7x7uoQ&list=PLn64dwBe2-T2biPCruXOo8c3i3mSQHKtm",
-      "observacoes": "Certifique-se de que o seu componente possui as propriedades e métodos necessários para suportar o template acima.",
-      "id": 7
+      "nome": "Poli Eusebio",
+      "telefone": "935202320",
+      "email": "poli@outergamil.com",
+      "aniversario": "2024-06-05",
+      "redes": "https://www.aliexpress.com/",
+      "observacoes": "",
+      "id": 10
     },
     {
-      "nome": "Ana Pedro Adão",
-      "telefone": "967 390 345",
-      "email": "ana@mailintor.com",
-      "aniversario": "2024-06-03",
-      "redes": "",
-      "observacoes": "Certifique-se de que o seu componente possui as propriedades e métodos necessários para suportar o template acima.",
-      "id": 8
+      "nome": "Victor André",
+      "telefone": "943202150",
+      "email": "victor@gmail.com",
+      "aniversario": "2024-06-05",
+      "redes": "https://cursos.alura.com.br/course",
+      "observacoes": "",
+      "id": 11
+    },
+    {
+      "nome": "Maura Patrícia Joaquim",
+      "telefone": "967949422",
+      "email": "mura@mailintor.com",
+      "aniversario": "2024-06-04",
+      "redes": "https://www.aliexpress.com/",
+      "observacoes": "",
+      "id": 12
     }
   ]
 }

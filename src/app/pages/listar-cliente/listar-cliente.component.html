@@ -12,27 +12,28 @@
       <img src="assets/img/plus.png" alt="">
       <span>Adicionar contato</span>
     </button>
-    <a class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#staticBackdrop"> Praticar</a>
+    <a class="btn btn-warning" routerLink="/forms-template"> Praticar</a>
   </section>
   <ng-container *ngFor="let letra of alfabeto; ">
     <app-separador>
       {{ letra }}
     </app-separador>
     <ng-container *ngFor="let contato of filtrarContatosPorLetraInicial(letra)">
-      <app-section-contacto [nome]="contato.nome" [telefone]="contato.telefone"></app-section-contacto>
+      <app-section-contacto [nome]="contato.nome" [telefone]="contato.telefone" [id]="contato.id!"></app-section-contacto>
     </ng-container>
   </ng-container>
     <!--Modal e formularios-->
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-  <div class="modal-dialog">
+<div class="modal fade" id="formularioModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog ">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="staticBackdropLabel">Formulários no Angular</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <section>
-
+        <section class="cards">
+          <a class="btn btn-primary" (click)="closeModal()">Formulario Reactive</a>
+          <a class="btn btn-primary" >Template Foms</a>
         </section>
       </div>
       <div class="modal-footer">
@@ -42,4 +43,3 @@
   </div>
 </div>
 
-</app-contain>

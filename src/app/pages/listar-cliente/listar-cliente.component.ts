@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { Icontactos } from 'src/app/interface/icontactos';
 import { ContactosService } from 'src/app/services/contactos.service';
 import { FormsModule } from '@angular/forms';
-declare var $: any;
+import { Router } from '@angular/router';
+import { PerfilContatosComponent } from '../perfil-contatos/perfil-contatos.component';
 
+declare var $: any;
 @Component({
   selector: 'app-listar-cliente',
   templateUrl: './listar-cliente.component.html',
@@ -16,7 +18,7 @@ export class ListarClienteComponent implements OnInit {
   filtroPorTexto: string = '';
 
 
-  constructor(private contactoService: ContactosService) { }
+  constructor(private contactoService: ContactosService, private router : Router) { }
 
   ngOnInit(): void {
     this.listar();
@@ -56,5 +58,23 @@ export class ListarClienteComponent implements OnInit {
 
   trackByContatoId(index: number, item: any): number {
     return item.id;
+  }
+  closeModal(){
+    // const modalModelo = $('#formularioModal');
+    //  modalModelo.modal('hide');
+    // $('#formularioModal').hide();
+    // this.router.navigateByUrl('/section-forms')
+
+    const modalElement = $('#formularioModal');
+    if (modalElement) {
+      modalElement.modal('hide');
+      this.router.navigateByUrl('/section-forms')
+    }
+  }
+  openModal(){
+    const modalElement = $('#formularioModal');
+    if (modalElement) {
+      modalElement.modal('show');
+    }
   }
 }

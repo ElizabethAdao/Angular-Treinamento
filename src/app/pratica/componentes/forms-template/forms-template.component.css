@@ -1,0 +1,108 @@
+.cabecalho-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .cabecalho-link img {
+  align-self: center;
+  margin-bottom: 56px;
+}
+
+.cabecalho-link div {
+  display: flex;
+  align-self: flex-start;
+}
+
+.cabecalho-link img.seta {
+  margin: 0 8px;
+}
+
+ .cabecalho-link button {
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  background: none;
+}
+
+.cabecalho-link a {
+  text-decoration: none;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  letter-spacing: 0px;
+  color: #0D6EFD;
+}
+
+label {
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 27px;
+  letter-spacing: 0;
+  text-align: left;
+}
+input, textarea{
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #CED4DA;
+    width: 100%;
+    margin: 8px 0 12px 0;
+    padding: 6px 12px;
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+}
+input:focus , textarea:focus {
+  outline: none; /*Serve para retirar o focus das inputs*/
+}
+textarea {
+  height: 84px;
+}
+label[for="redes"] {
+  display: block;
+}
+.botoes{
+  display: flex;
+  justify-content: space-between;
+}
+.botao-cancelar, .botao-salvar, .botao-desabilitado {
+  width: 196px;
+  height: 45px;
+  padding: 6px, 12px;
+  border-radius: 5px;
+  border: 1px;
+  gap: 8px;
+  font-family: 'Montserrat';
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+input::placeholder, textarea::placeholder {
+  font-family: 'Montserrat';
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 23px;
+  letter-spacing: 0;
+  text-align: left;
+}
+ h4{
+  border-bottom:  1px solid #0D6EFD;
+  padding: 20px 0;
+  text-align: left;
+  font-weight: 300;
+
+ }
+.formularios{
+  padding: 20px 0;
+}
+.mensagem-erro{
+  color: red;
+  font-size: 12px;
+  margin-bottom: 5px;
+  font-family: 'Montserrat';
+}

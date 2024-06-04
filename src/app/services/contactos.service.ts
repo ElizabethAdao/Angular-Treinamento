@@ -20,6 +20,14 @@ export class ContactosService {
   salvarContactos(contacto: Icontactos){
     return this.http.post<Icontactos>(this.API, contacto)
   }
+  buscarId(id: number) : Observable<Icontactos>{
+    const urlId = `${this.API}/${id}`;
+    return this.http.get<Icontactos>(urlId)
+  }
+  excluir(id: number) : Observable<Icontactos>{
+    const urlId = `${this.API}/${id}`;
+    return this.http.delete<Icontactos>(urlId)
+  }
   listarClientes() : Observable<ICliente[]>{
     return this.http.get<ICliente[]>(this.Url)
   }

@@ -1,1 +1,69 @@
-<p>perfil-contatos works!</p>
+<app-contain>
+  <header>
+    <section class="cabecalho-link">
+      <img src="assets/img/logo.png" alt="">
+      <div>
+        <button>
+          <img class="seta" src="assets/img/arrow-left.png" alt="">
+          <a routerLink="/listar-cliente">Voltar</a>
+        </button>
+      </div>
+    </section>
+    <section class="cabecalho-contato">
+      <img src="assets/img/perfil-contato.png" alt="">
+      <h1>Perfil do contato</h1>
+    </section>
+  </header>
+
+  <section class="perfil">
+    <ul>
+      <li>
+        <i class="material-icons">account_circle</i>
+        <strong>Nome</strong>
+      </li>
+      <li>
+        {{lsClientes.nome}}
+      </li>
+      <li>
+        <i class="material-icons">call</i>
+        <strong>Telefone</strong>
+      </li>
+      <li>
+        (+244) {{lsClientes.telefone}}
+      </li>
+      <li>
+        <i class="material-icons">email</i>
+        <strong>Email</strong>
+      </li>
+      <li>
+        {{lsClientes.email}}
+      </li>
+      <li>
+        <i class="material-icons">calendar_month</i>
+        <strong>Aniversário</strong>
+      </li>
+      <li>
+        {{lsClientes.aniversario}}
+      </li>
+      <li>
+        <i class="material-icons">language</i>
+        <strong>Redes</strong>
+      </li>
+      <li>
+        {{lsClientes.redes}}
+        <span class="valor-nao-encontardo" ngShow="!cliente.redes">Site não finformado</span>
+      </li>
+      <li>
+        <i class="material-icons">description</i>
+        <strong>Observações</strong>
+      </li>
+      <li>
+        {{lsClientes.observacoes}}
+      </li>
+    </ul>
+    <div class="botoes">
+      <button class="botao-excluir" (click)="excluir()">Excluir contacto</button>
+      <button class="botao-editar">Editar</button>
+    </div>
+  </section>
+</app-contain>
