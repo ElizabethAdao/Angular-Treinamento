@@ -41,7 +41,7 @@ export class SectionFormulariosComponent implements OnInit {
   salvarCliente(){
     var novoCliente = this.clienteForm.value;
     this.srContactos.salvarClientes(novoCliente).subscribe(()=>{
-      console.log('Cliente inserido com sucesso!');
+      console.log('Cliente inserido com sucesso!!');
       this.clienteForm.reset();
       this. listar();
     })
