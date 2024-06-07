@@ -46,6 +46,30 @@
         "travesa": "3"
       },
       "id": 6
+    },
+    {
+      "nome": "J Levi",
+      "telefone": "945676060",
+      "email": "levi@mailinator.com",
+      "observacoes": "testando",
+      "enderecos": {
+        "rua": "Samba Morro Bento Condóminos",
+        "cidade": "Luanda",
+        "travesa": "Condomínios Mangueirinhas"
+      },
+      "id": 7
+    },
+    {
+      "nome": "Vanda Pedro",
+      "telefone": "945992344",
+      "email": "vanda@mailinator.com",
+      "observacoes": "ola vanda",
+      "enderecos": {
+        "rua": "12",
+        "cidade": "Luanda",
+        "travesa": "Rua dos Generais"
+      },
+      "id": 8
     }
   ]
 }

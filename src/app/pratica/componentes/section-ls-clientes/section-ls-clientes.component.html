@@ -1,1 +1,18 @@
-<p>section-ls-clientes works!</p>
+<app-section-separador-container>
+  <header>
+    <button>
+      <img class="seta" src="assets/img/arrow-left.png" alt="">
+      <a routerLink="/listar-cliente">Voltar</a>
+    </button>
+  </header>
+<app-section-cabecalho></app-section-cabecalho>
+<input type="search" placeholder="pesquisar" [(ngModel)] ="filtroBuscar">
+<ng-container *ngFor="let letra of alfabeto" >
+  <app-section-separador>
+    {{letra}}
+  </app-section-separador>
+  <ng-container *ngFor="let item of filtroPorLetraInicial(letra)" >
+    <app-section-separador-contacto [nome]="item.nome" [telefone]="item.telefone"></app-section-separador-contacto>
+  </ng-container>
+</ng-container>
+</app-section-separador-container>

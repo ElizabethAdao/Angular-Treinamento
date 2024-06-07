@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { ContactosService } from 'src/app/services/contactos.service';
 import { ICliente } from '../../model/icliente';
+import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-section-formularios',
   templateUrl: './section-formularios.component.html',
@@ -11,7 +13,7 @@ export class SectionFormulariosComponent implements OnInit {
   clienteForm! : FormGroup;
   lsClientes : ICliente[] = [];
 
-  constructor(private srContactos: ContactosService, private fb : FormBuilder) { }
+  constructor(private srContactos: ContactosService, private fb : FormBuilder, private routa : Router) { }
 
   ngOnInit(): void {
     this. onInicialiazrForm();
@@ -41,9 +43,14 @@ export class SectionFormulariosComponent implements OnInit {
   salvarCliente(){
     var novoCliente = this.clienteForm.value;
     this.srContactos.salvarClientes(novoCliente).subscribe(()=>{
-      console.log('Cliente inserido com sucesso!!');
+      Swal.fire({
+        title: "Adicionado com sucesso",
+        text: "",
+        icon: "success"
+      });
       this.clienteForm.reset();
       this. listar();
+      this.routa.navigateByUrl('/section-lista-cliente')
     })
   }
   listar(){

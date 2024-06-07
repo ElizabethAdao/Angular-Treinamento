@@ -6,6 +6,8 @@ import { ListarClienteComponent } from './pages/listar-cliente/listar-cliente.co
 import { SectionFormulariosComponent } from './pratica/componentes/section-formularios/section-formularios.component';
 import { FormsTemplateComponent } from './pratica/componentes/forms-template/forms-template.component';
 import { PerfilContatosComponent } from './pages/perfil-contatos/perfil-contatos.component';
+import { SectionLsClientesComponent } from './pratica/componentes/section-ls-clientes/section-ls-clientes.component';
+import { SectionPerfilComponent } from './pratica/componentes/section-perfil/section-perfil.component';
 
 
 const routes: Routes = [
@@ -27,6 +29,13 @@ const routes: Routes = [
   },
   {
     path : 'perfil-contato/:id', component: PerfilContatosComponent
+  },
+
+  {
+    path : 'section-lista-cliente', component : SectionLsClientesComponent
+  },
+  {
+    path:'section-perfil', component:SectionPerfilComponent
   }
 ];
 
