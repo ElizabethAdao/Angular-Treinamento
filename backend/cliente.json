@@ -1,13 +1,6 @@
 {
   "cliente": [
     {
-      "id": 1,
-      "nome": "Paulo Samuel",
-      "email": "paulo@mailinator.com",
-      "telefone": "94567876",
-      "observacoes": "Testando o site"
-    },
-    {
       "nome": "Kim Paiva Domingos ",
       "telefone": "924605050",
       "email": "kim@mailinator.com",
@@ -22,13 +15,6 @@
       "id": 3
     },
     {
-      "nome": "Carlas Vandune",
-      "telefone": "956707070",
-      "email": "carlas@mailintor.com",
-      "observacoes": "Eu sou a Carla e gostaria se saber mais coisas sobre o vosso site",
-      "id": 4
-    },
-    {
       "nome": "Telma Pedro Paxi",
       "telefone": "945606060",
       "email": "tema@mailintor.com",
@@ -36,21 +22,9 @@
       "id": 5
     },
     {
-      "nome": "Paula",
-      "telefone": "945996789",
-      "email": "paula@mailintor.com",
-      "observacoes": "teste",
-      "enderecos": {
-        "rua": "H",
-        "cidade": "Luanda",
-        "travesa": "3"
-      },
-      "id": 6
-    },
-    {
-      "nome": "J Levi",
+      "nome": "Junior Matos",
       "telefone": "945676060",
-      "email": "levi@mailinator.com",
+      "email": "junior@mailinator.com",
       "observacoes": "testando",
       "enderecos": {
         "rua": "Samba Morro Bento Condóminos",
@@ -60,14 +34,14 @@
       "id": 7
     },
     {
-      "nome": "Vanda Pedro",
-      "telefone": "945992344",
-      "email": "vanda@mailinator.com",
-      "observacoes": "ola vanda",
+      "nome": "J Levi Ramos",
+      "telefone": "945676060",
+      "email": "levi@mailinator.com",
+      "observacoes": "testando",
       "enderecos": {
-        "rua": "12",
+        "rua": "Samba Morro Bento Condóminos",
         "cidade": "Luanda",
-        "travesa": "Rua dos Generais"
+        "travesa": "Condomínios Mangueirinhas"
       },
       "id": 8
     }

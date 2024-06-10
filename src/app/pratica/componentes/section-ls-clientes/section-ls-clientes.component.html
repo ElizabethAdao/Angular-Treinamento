@@ -12,7 +12,7 @@
     {{letra}}
   </app-section-separador>
   <ng-container *ngFor="let item of filtroPorLetraInicial(letra)" >
-    <app-section-separador-contacto [nome]="item.nome" [telefone]="item.telefone"></app-section-separador-contacto>
+    <app-section-separador-contacto [nome]="item.nome" [telefone]="item.telefone" [id]="item.id"></app-section-separador-contacto>
   </ng-container>
 </ng-container>
 </app-section-separador-container>

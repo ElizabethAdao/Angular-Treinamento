@@ -8,10 +8,10 @@
       <strong>{{ telefone }} </strong>
     </li>
     <li>
-      <a>
+      <a [routerLink]="['/section-forms',id]">
         <img src="/assets/img/pencil-square.png"  alt="">
       </a>
-      <a routerLink="/section-perfil">
+      <a [routerLink] = "['/section-perfil',id]">
         <img src="/assets/img/trash.png" alt="">
       </a>
     </li>

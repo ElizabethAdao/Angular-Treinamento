@@ -24,7 +24,6 @@ export class FormsTemplateComponent implements OnInit {
   onSalvarClientes(clienteForm : NgForm){
     const novoCliente = clienteForm.value;
     this.serviceClientes.salvarClientes(novoCliente).subscribe(()=>{
-      console.log('cliente Adicionado com sucesso',clienteForm.value);
       clienteForm.reset();
     })
   }

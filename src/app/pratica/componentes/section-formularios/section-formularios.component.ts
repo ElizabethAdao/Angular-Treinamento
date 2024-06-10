@@ -3,7 +3,7 @@ import { FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 import { ContactosService } from 'src/app/services/contactos.service';
 import { ICliente } from '../../model/icliente';
 import Swal from 'sweetalert2';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'app-section-formularios',
   templateUrl: './section-formularios.component.html',
@@ -13,11 +13,12 @@ export class SectionFormulariosComponent implements OnInit {
   clienteForm! : FormGroup;
   lsClientes : ICliente[] = [];
 
-  constructor(private srContactos: ContactosService, private fb : FormBuilder, private routa : Router) { }
+  constructor(private srContactos: ContactosService, private fb : FormBuilder, private routa : Router, private routeActive: ActivatedRoute) { }
 
   ngOnInit(): void {
     this. onInicialiazrForm();
     this.listar();
+    this.carregarCliente();
   }
 
   onInicialiazrForm(){
@@ -40,9 +41,12 @@ export class SectionFormulariosComponent implements OnInit {
     })*/
 
   }
+
   salvarCliente(){
     var novoCliente = this.clienteForm.value;
-    this.srContactos.salvarClientes(novoCliente).subscribe(()=>{
+    const id = this.routeActive.snapshot.paramMap.get('id');
+    novoCliente.id = id ? parseInt(id) : null;
+    this.srContactos.EditaSalvarCliente(novoCliente).subscribe(()=>{
       Swal.fire({
         title: "Adicionado com sucesso",
         text: "",
@@ -60,5 +64,14 @@ export class SectionFormulariosComponent implements OnInit {
   }
   cancelar(){
     this.clienteForm.reset();
+  }
+  carregarCliente(){
+    const id = this.routeActive.snapshot.paramMap.get('id');
+    if(id){
+      this.srContactos.buscarCliente(parseInt(id)).subscribe((cliente) =>{
+        this.clienteForm.patchValue(cliente)
+      })
+    }
+
   }
 }

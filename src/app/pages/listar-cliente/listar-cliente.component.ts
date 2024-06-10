@@ -29,7 +29,6 @@ export class ListarClienteComponent implements OnInit {
   listar(){
     this.contactoService.obterContatos().subscribe((item) =>{
       this.contatos = item;
-      console.log(item)
      });
   }
   private removerAcentos(texto: string): string {

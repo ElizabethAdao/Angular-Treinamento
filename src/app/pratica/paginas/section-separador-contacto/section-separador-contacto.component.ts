@@ -7,7 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SectionSeparadorContactoComponent implements OnInit {
 @Input() nome :  string  = '';
-@Input () telefone : string = '';
+@Input() telefone : string = '';
+@Input() id? : number;
+
   constructor() { }
 
   ngOnInit(): void {

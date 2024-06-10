@@ -1,36 +1,43 @@
 <app-section-separador-container>
   <section class="perfil">
+    <header>
+      <button>
+        <img class="seta" src="assets/img/arrow-left.png" alt="">
+        <a routerLink="/listar-cliente"> Voltar</a>
+      </button>
+    </header>
     <ul>
       <li>
         <i class="material-icons">account_circle</i>
-        <strong>Nome doo Cliente</strong>
+        <strong>Nome do Cliente</strong>
       </li>
+      <li>{{lsCliente.nome}}</li>
       <li>
       </li>
       <li>
         <i class="material-icons">call</i>
         <strong>Telefone</strong>
       </li>
-      <li>
-        (+244)
-      </li>
+      <li>(+244) {{lsCliente.telefone}}</li>
       <li>
         <i class="material-icons">email</i>
         <strong>Email</strong>
       </li>
+      <li>{{lsCliente.email}}</li>
       <li>
 
       </li>
       <li>
-        <i class="material-icons">description</i>
+        <i class="material-icons">chat</i>
         <strong>Observações</strong>
       </li>
+      <li>{{lsCliente.observacoes}}</li>
       <li>
 
       </li>
     </ul>
     <div class="botoes">
-      <button class="botao-excluir">Excluir<i class="material-icons">delete</i></button>
+      <button class="botao-excluir" (click)="eliminarClinente(lsCliente.id)">Excluir<i class="material-icons">delete</i></button>
       <button class="botao-editar">Editar <i class="material-icons">edit</i></button>
     </div>
   </section>

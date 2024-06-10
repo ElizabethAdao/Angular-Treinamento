@@ -21,8 +21,14 @@ const routes: Routes = [
    {
     path : 'formulario', component: FormularioContactosComponent
    },
+   {
+    path : 'formulario/:id', component: FormularioContactosComponent
+   },
   {
     path : 'section-forms', component : SectionFormulariosComponent
+  },
+  {
+    path : 'section-forms/:id', component : SectionFormulariosComponent
   },
   {
     path: 'forms-template' , component: FormsTemplateComponent
@@ -35,7 +41,7 @@ const routes: Routes = [
     path : 'section-lista-cliente', component : SectionLsClientesComponent
   },
   {
-    path:'section-perfil', component:SectionPerfilComponent
+    path:'section-perfil/:id', component:SectionPerfilComponent
   }
 ];
 

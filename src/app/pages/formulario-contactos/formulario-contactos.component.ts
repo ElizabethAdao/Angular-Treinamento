@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router, RouterLink } from '@angular/router';
+import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { FormGroup, FormControl, Validators,FormBuilder } from '@angular/forms';
 import { ContactosService } from 'src/app/services/contactos.service';
 import Swal from 'sweetalert2';
@@ -13,10 +13,11 @@ import Swal from 'sweetalert2';
 export class FormularioContactosComponent implements OnInit {
   contactoForm!: FormGroup;
 
-  constructor(private contacto : ContactosService, private router : Router) { }
+  constructor(private contacto : ContactosService, private router : Router, private routerActive: ActivatedRoute) { }
 
   ngOnInit(): void {
    this.inicializarFormulario();
+   this.carregarContato();
   }
 
 
@@ -31,10 +32,19 @@ export class FormularioContactosComponent implements OnInit {
       observacoes: new FormControl(''),
     })
   }
+  carregarContato(){
+    const id = this.routerActive.snapshot.paramMap.get('id');
+    if(id){
+      this.contacto.buscarId(parseInt(id)).subscribe((itemContato) =>{
+        this.contactoForm.patchValue(itemContato)
+      })
+    }
+  }
   salvar(){
     const novoContacto = this.contactoForm.value;
-    this.contacto.salvarContactos(novoContacto).subscribe(() =>{
-      console.log('inserido com sucesso')
+    const id = this.routerActive.snapshot.paramMap.get('id')
+    novoContacto.id = id ? parseInt(id) : null;
+    this.contacto.EditarOuSalvar(novoContacto).subscribe(() =>{
       this.cancelar();
       Swal.fire({
         title: "Adicionado com sucesso",
