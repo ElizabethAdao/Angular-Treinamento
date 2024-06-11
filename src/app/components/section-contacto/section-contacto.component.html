@@ -1,5 +1,6 @@
 <section class="contato">
   <ul>
+    <img [hidden]="!avatar" [src]="avatar" alt="Avatar" class="avatar" [routerLink]="['/formulario',id]">
       <li>
           <strong>{{ nome }}</strong>
       </li>

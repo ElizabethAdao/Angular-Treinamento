@@ -10,13 +10,18 @@
       </div>
     </section>
     <section class="cabecalho-contato">
-      <img src="assets/img/perfil-contato.png" alt="">
       <h1>Perfil do contato</h1>
+      <ng-container *ngIf="lsClientes.avatar !== ''" >
+        <figure>
+          <img [src]="lsClientes.avatar" alt="Avatar do contato">
+        </figure>
+      </ng-container>
     </section>
   </header>
 
   <section class="perfil">
     <ul>
+
       <li>
         <i class="material-icons">account_circle</i>
         <strong>Nome</strong>
@@ -51,7 +56,6 @@
       </li>
       <li>
         {{lsClientes.redes}}
-        <span class="valor-nao-encontardo" ngShow="!cliente.redes">Site não finformado</span>
       </li>
       <li>
         <i class="material-icons">description</i>

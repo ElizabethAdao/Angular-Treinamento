@@ -19,7 +19,7 @@
       {{ letra }}
     </app-separador>
     <ng-container *ngFor="let contato of filtrarContatosPorLetraInicial(letra)">
-      <app-section-contacto [nome]="contato.nome" [telefone]="contato.telefone" [id]="contato.id!"></app-section-contacto>
+      <app-section-contacto [nome]="contato.nome" [telefone]="contato.telefone" [id]="contato.id!" [avatar]="contato.avatar"></app-section-contacto>
     </ng-container>
   </ng-container>
     <!--Modal e formularios-->

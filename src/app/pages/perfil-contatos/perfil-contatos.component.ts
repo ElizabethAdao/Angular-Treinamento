@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 export class PerfilContatosComponent implements OnInit {
   lsClientes: Icontactos = {
     nome: '',
+    avatar : '',
     telefone: '',
     email: '',
     aniversario: '',

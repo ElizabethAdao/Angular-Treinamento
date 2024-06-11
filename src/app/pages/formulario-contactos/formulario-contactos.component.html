@@ -16,6 +16,17 @@
   </header>
   <app-separador></app-separador>
   <form [formGroup]="contactoForm" name="contactoForm" (ngSubmit)="salvar()" >
+    <div role="button" class="imagem-contato">
+        <i class="material-icons">add</i>
+        <label for="avatar">Adicione a imagem do contato</label>
+        <input type="file" accept="image/*" id="avatar" required (change)="aoSelecionrArquivo($event)">
+    </div>
+    <ng-container *ngIf="contactoForm.get('avatar')?.value !== ''" >
+      <figure>
+        <img [src]="contactoForm.get('avatar')?.value" alt="Avatar do contato">
+      </figure>
+    </ng-container>
+
     <label for="nome">Nome</label>
     <input
       type="text"
